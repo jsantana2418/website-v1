@@ -1,0 +1,94 @@
+/* Media queries in CSS3 extend the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+Using media queries are a popular technique for delivering a tailored style sheet to tablets, iPhone, and Androids.
+
+@media mediatype and (expressions) {
+    CSS-Code;
+} */
+
+@media screen and (min-width: 480px) {
+  /***********************************
+  TWO COLUMN LAYOUT
+  ************************************/
+
+  #primary {
+    width: 50%;
+    float: left;
+  }
+
+  #secondary {
+    width: 40%;
+    float: right;
+  }
+
+  /***********************************
+  3 * 5 = 15
+  100% - 15% = 85%
+  85 / 3 = 28.33333333333
+  ************************************/
+
+  /***********************************
+  PAGE: PORTFOLIO
+  ************************************/
+
+  #gallery li {
+    width: 28.3333%;
+  }
+
+  #gallery li:nth-child(3n + 1) {
+    clear: left;
+  }
+
+  /***********************************
+  PAGE: ABOUT
+  ************************************/
+
+  .profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+
+}
+
+@media screen and (min-width: 660px) {
+
+  /***********************************
+  PAGE: HEADER
+  ************************************/
+
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    text-align: right;
+    width: 45%;
+  }
+
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
+
+  header {
+    border-bottom: 5px solid #599a68;
+    margin-bottom: 60px;
+  }
+
+}
